@@ -10,9 +10,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -80,7 +83,7 @@ fun TrabajoHoy() {
         HorizontalDivider()
         Column(modifier=Modifier
             .padding(10.dp)
-            .fillMaxSize(),
+            .fillMaxWidth(),
             //verticalArrangement = Arrangement.SpaceAround,
             horizontalAlignment = Alignment.Start
 
@@ -130,6 +133,43 @@ fun TrabajoHoy() {
             )
         }
         HorizontalDivider()
+        Column(modifier=Modifier
+            .fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(
+                text = "Sobre mi materia favorita",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Gray,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .padding(vertical = 5.dp)
+            )
+            Text(
+                text = "Me apasiona el Desarrollo de Aplicaciones Moviles porque permite transformar ideas en herramientas tangibles que las personas usan a diario. Me encanta el reto de diseñar interfaces intuitivas.",
+                fontSize = 20.sp,
+                color = Color.Black,
+                textAlign = TextAlign.Justify,
+                modifier = Modifier
+                    .padding( 5.dp)
+            )
+        }
+
+        Spacer(modifier = Modifier.height(90.dp))
+
+        Button(
+            onClick = {},
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.Blue
+            ),
+        ) {
+            Text(
+                text = "Contactar Conmigo",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
+
+            )
+        }
 
 
     }
